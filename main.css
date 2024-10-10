@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    padding: 16px 0;
+    margin-bottom: 56px;
+    background-color: #3868d6;
+}
+
+header h1{
+    color: #fff;
+    font-size: 32px;
+}
+
+.menu > li{
+    display: inline;
+    list-style: none;
+    padding: 16px;
+}
+
+.menu > li a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.sobreALoja{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.sobreALoja img{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding-right: 16px;
+}
+
+.sobreALoja{
+    margin-bottom: 56px;
+}
+
+
+section h2{
+    color: #3868d6;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #3868d6;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+.produtos .produto{
+    margin: 0 auto;
+    padding: 8px;
+}
+.produtos .produto img{
+    max-width: 100%;
+    margin-bottom: 16px;
+}
+
+.produtos .produto h3{
+    margin-bottom: 16px;
+}
+.produtos .produto p{
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+.produtos .produto button{
+    padding: 16px 0;
+    width: 100%;
+    background-color: #3868d6;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+/************************************************
+ * CELULAR media queries
+ **************************************************/
+@media screen and (max-width:767px){
+    .container{
+        max-width: 90%;
+    }
+
+    .sobreALoja{
+        display: block;
+        margin-bottom: 56px;
+    }
+    .sobreALoja img{
+        width: 100%;
+        margin: 0 auto 32px;
+        display: block;
+    }
+
+    .produtos .produto a{
+        display: block;
+        font-size: 1.5em;
+    }
+    
+    .produtos .produto img{
+        margin-right: 0px;
+    }
+    
+    .produtos{
+        display: block;
+    }
+
+    .produtos .produto{
+        margin-bottom: 32px;
+    }
+}
+
+/************************************************
+ * TABLETS media queries
+ **************************************************/
+@media screen and (min-width:768px) and (max-width:1023px){
+    .container{
+        max-width: 90%;
+    }
+
+    .produtos .produto a{
+        font-size: 1.5em;
+    }
+    .produtos{
+        grid-template-columns: repeat(2, 49%);
+    }
+}
+/****************************************
+ * PC o telas maior a 1024px
+ *************************************/
+@media screen and (min-width:1024px) {
+    .botao-menu{
+        display: none;
+    }
+}
